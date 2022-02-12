@@ -5,21 +5,23 @@ from selenium.webdriver.common.by import By
 from time import sleep
 import re
 from unicodedata import normalize
-import json
+import messageData
+import features as feat
 
 
 class WhatsappBot:
     driver = None
-
+    username=None
     def __init__(self, driverpath, userdata=None):
-        opt = Options()
-        opt.add_argument('--user-data-dir=D:/User_Data')
-        service = Service('./driver/chromedriver.exe')
-        self.driver = webdriver.Chrome(service=service, options=opt)
+        # opt = Options()
+        # opt.add_argument('--user-data-dir=D:/User_Data')
+        service = Service('./driver/chromedriver')
+        self.driver = webdriver.Chrome(service=service)
         pass
 
     def Connection(self, driverpath):
         self.__init__(driverpath)
+        return WhatsappBot
 
     def search_chat(self):
         print("Searching chats")
@@ -42,17 +44,17 @@ class WhatsappBot:
                 continue
 
             element_name = chat.find_elements(By.CLASS_NAME, 'zoWT4')
-            name = element_name[0].text.upper().strip()
-
+            name = element_name[0].text.replace(" ","")
+            WhatsappBot.username = name
             print(name, "authorized to be served by bot")
 
             chat.click()
             return True
         return False
 
-    def identifying_message(self):
+    def identifying_message(self,element=1):
         element_box_message = self.driver.find_elements(By.CLASS_NAME, "Nm1g1")
-        position = len(element_box_message) - 1
+        position = len(element_box_message) - element
 
         color = element_box_message[position].value_of_css_property("background-color")
 
@@ -66,7 +68,7 @@ class WhatsappBot:
         print("message recieved..", message)
         return self.normalizer(message)
 
-    def normalizer(self,message: str):
+    def normalizer(self, message: str):
         message = re.sub(
             r"([^n\u0300-\u036f]|n(?!\u0303(?![\u0300-\u036f])))[\u0300-\u036f]+", r"\1",
             normalize("NFD", message), 0, re.I
@@ -74,26 +76,46 @@ class WhatsappBot:
 
         return normalize("NFD", message)
 
-    def prepared_response(message: str):
+    def prepared_response(self, message: str):
         print("prepared responses")
-        if message.__contains__("hello" or "Hello"):
-            response = "hello i'm bot how can i help you\n"
-        elif message.__contains__("what's your namee buddy"):
-            response = "my name is not defined yet. \n"
-        elif message.__contains__("What's up"):
-            response = "I'm good what about you? \n"
-        elif message.__contains__("help"):
-            response = "./assets/test.jpg"
-        elif message.__contains__("image"):
-            response = "image sending.... \n"
+        data = messageData.MessageLoad()
+        for index in data:
+            if message.__contains__(index['message']):
+                response = index['Replay']
+                return response
         else:
-            response = "invalid command \n"
+            if message.__contains__('add announcement'):
 
+                if feat.isAdmin(WhatsappBot.username):
+                    response = "what's your message?\n"
+                    return response
+                else:
+                    response = "you have not right to change into bot :(\n"
+                    return response
+            elif message.__contains__('add message'):
+                if feat.isAdmin(WhatsappBot.username):
+                    response = "what would you add into user message ?\n"
+                    return response
+                else:
+                    response = "you have not right to change into bot :(\n"
+                    return response
+
+            elif self.identifying_message(2)== "what would you add into user message ?":
+                messageData.EditMessage(5, "Replay", message)
+                response = "message updated\n"
+                return response
+
+            elif self.identifying_message(2)== "what's your message?":
+                messageData.EditMessage(5, "Replay", message)
+                response = "message updated\n"
+                return response
+            else:
+                response = "invalid command \n"
         return response
 
-    def message_process(self,message: str):
+    def message_process(self, message: str):
         chatbox = self.driver.find_element(By.XPATH,
-                                      '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
+                                           '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
         if message == "image":
             response = self.prepared_response(message)
             chatbox.send_keys(response)
@@ -102,26 +124,31 @@ class WhatsappBot:
             response = self.prepared_response(message)
             chatbox.send_keys(response)
         self.close_chat()
+    def InsertMessage(self):
 
     def send_image(self):
         filepath = r"D:\BCA\BCA VI\Project\Whatsapp Bot\assets\test.jpg"
 
         sleep(2)
-        attech = self.driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/div')
+        attech = self.driver.find_element(By.XPATH,
+                                          '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/div')
         attech.click()
         image_box = self.driver.find_element(By.XPATH,
-                                        '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/span/div[1]/div/ul/li[1]/button/input')
+                                             '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/span/div[1]/div/ul/li[1]/button/input')
         image_box.send_keys(filepath)
         sleep(10)
         send_box = self.driver.find_element(By.XPATH,
-                                       '//*[@id="app"]/div[1]/div[1]/div[2]/div[2]/span/div[1]/span/div[1]/div/div[2]/div/div[2]/div[2]/div/div')
+                                            '//*[@id="app"]/div[1]/div[1]/div[2]/div[2]/span/div[1]/span/div[1]/div/div[2]/div/div[2]/div[2]/div/div')
         send_box.click()
         sleep(2)
 
     def close_chat(self):
         openmenu = self.driver.find_element(By.XPATH, '//*[@id="main"]/header/div[3]/div/div[2]/div/div')
+
         openmenu.click()
+        sleep(1)
         close_chat = self.driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/span[4]/div/ul/div/div/li[3]/div[1]')
+        sleep(1)
         close_chat.click()
         print("chat closed")
 
@@ -139,4 +166,7 @@ class WhatsappBot:
                 continue
 
             self.message_process(message)
-            
+
+
+wb = WhatsappBot('./driver/chromedriver')
+wb.Run()

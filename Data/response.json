@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "message": "Hello",
+        "Replay": "Hye there how can i help you?\n"
+    },
+    {
+        "id": 2,
+        "message": "yourinfo",
+        "Replay": "i'm whatsapp bot created by Dharmeshvyas\n"
+    },
+    {
+        "id": 3,
+        "message": "address",
+        "Replay": "sorry i don't have permission to tell you :(\n"
+    },
+    {
+        "id": 4,
+        "message": "who is your Owner",
+        "Replay": "name : Dharmesh vyas\n"
+    },
+    {
+        "id": 5,
+        "message": "bye",
+        "Replay": "Bye have a good day\n"
+    },
+    {
+        "id": 6,
+        "message": "announcement:",
+        "Replay": "You have to create ppt tomorrow\n"
+    },
+    {
+        "id": 7,
+        "message": "image",
+        "Replay": "image sending...\n"
+    }
+]
