@@ -18,6 +18,7 @@ class WhatsappBot:
     def __init__(self, driverpath, userdata=None):
         opt = Options()
         # for firefox
+        #nyfjrizg
         opt.add_argument("-profile")
         opt.add_argument("/home/dv/.mozilla/firefox/99q1ht97.default-release/")
         # for chrome
