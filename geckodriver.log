@@ -1,0 +1,510 @@
+1644773532842	geckodriver	INFO	Listening on 127.0.0.1:33475
+1644773533349	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--user-data-dir=/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "38647" "-no-remote" "-profile" "/tmp/rust_mozprofileC294NH"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644773534598	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileC294NH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38647/devtools/browser/eba0743e-e010-4204-a66d-c1dcc9d7a4c3
+1644773537441	Marionette	INFO	Listening on port 38401
+1644773537510	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1644773561247	geckodriver	INFO	Listening on 127.0.0.1:50667
+1644773561257	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--user-data-dir=/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "45343" "-no-remote" "-profile" "/tmp/rust_mozprofileIRDNEp"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644773562689	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileIRDNEp/search.json.mozlz4", (void 0)))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644773567951	Marionette	INFO	Stopped listening on port 38401
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644773572556	geckodriver	INFO	Listening on 127.0.0.1:40175
+1644773572563	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--user-data-dir=/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "36957" "-no-remote" "-profile" "/tmp/rust_mozprofilejE7qNi"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644773573784	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejE7qNi/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:36957/devtools/browser/9b73d6e3-a8a5-44f3-a371-4cb8558cbeb1
+1644773576925	Marionette	INFO	Listening on port 33727
+1644773577041	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644773590661	Marionette	INFO	Stopped listening on port 33727
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1644773961428	geckodriver	INFO	Listening on 127.0.0.1:49413
+1644773961953	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "38949" "-no-remote" "-profile" "/tmp/rust_mozprofileivAo03"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644773963868	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileivAo03/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38949/devtools/browser/6f28ad0c-0004-4436-ab39-45a87729b45a
+1644773969299	Marionette	INFO	Listening on port 41719
+1644773969404	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1644773987522	Marionette	INFO	Stopped listening on port 41719
+1644774003219	geckodriver	INFO	Listening on 127.0.0.1:37415
+1644774003726	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "42683" "-no-remote" "-profile" "/tmp/rust_mozprofilekJ5pRz"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644774005898	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilekJ5pRz/search.json.mozlz4", (void 0)))
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644774027831	geckodriver	INFO	Listening on 127.0.0.1:54083
+1644774037915	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "55685" "-no-remote" "-profile" "/tmp/rust_mozprofileWHPLx6"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644774039613	Marionette	INFO	Marionette enabled
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+DevTools listening on ws://localhost:55685/devtools/browser/3ecd8832-5dd3-472d-b9db-cf87372b37b5
+1644774046637	Marionette	INFO	Listening on port 45501
+1644774046719	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1644774080040	geckodriver	INFO	Listening on 127.0.0.1:53385
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860592
+1644774084690	Marionette	INFO	Stopped listening on port 45501
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1644774094087	geckodriver	INFO	Listening on 127.0.0.1:35859
+1644774106116	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "50651" "-no-remote" "-profile" "/tmp/rust_mozprofilewVhr5R"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644774108799	Marionette	INFO	Marionette enabled
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+DevTools listening on ws://localhost:50651/devtools/browser/a7d0b777-6f6d-416d-bddc-eb10bb8e651f
+1644774118245	Marionette	INFO	Listening on port 36977
+1644774118378	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860589
+1644774386532	Marionette	INFO	Stopped listening on port 36977
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644775393805	geckodriver	INFO	Listening on 127.0.0.1:37359
+1644775393827	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "56781" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644775422073	geckodriver	INFO	Listening on 127.0.0.1:38251
+1644775422082	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "42709" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644775422824	Marionette	INFO	Marionette enabled
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+DevTools listening on ws://localhost:42709/devtools/browser/870c1735-bce5-42ed-bede-7cf77874fb5b
+1644775425139	Marionette	INFO	Listening on port 36411
+1644775425231	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1644775446962	geckodriver	INFO	Listening on 127.0.0.1:41209
+1644775446978	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "51919" "-no-remote"
+1644775448694	Marionette	INFO	Stopped listening on port 36411
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860428
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644775450105	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:51919/devtools/browser/85ae37c8-5786-46e0-91d5-5f4253cba4a3
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644775452502	Marionette	INFO	Listening on port 32995
+1644775452653	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860428
+1644775813523	Marionette	INFO	Stopped listening on port 32995
+JavaScript error: resource://gre/modules/ExtensionContent.jsm, line 489: TypeError: window is null
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+1644775816243	geckodriver	INFO	Listening on 127.0.0.1:58835
+1644775816749	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "40489" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644775817536	Marionette	INFO	Marionette enabled
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+DevTools listening on ws://localhost:40489/devtools/browser/3a495886-4550-45d9-aa2a-a0de7dedb07a
+1644775819969	Marionette	INFO	Listening on port 35505
+1644775820103	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+SourceActor threw an exception: [Exception... "Failed to open input source 'file:///'"  nsresult: "0x80520015 (NS_ERROR_FILE_ACCESS_DENIED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:448:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:412:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2097:35
+addAllSources@resource://devtools/server/actors/thread.js:1452:14
+watch@resource://devtools/server/actors/resources/sources.js:49:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:150:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:52:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:623:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:529:21
+Line: 670, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: NS_ERROR_FILE_ACCESS_DENIED: Failed to open input source 'file:///'
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/stylex-32b8c72381764f83c27f5022f377a22d.css, using system principal instead."
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_qr-9f0f4aeea0d5764fbf91.css, using system principal instead."
+console.error: "stylesheets: fetch failed for https://web.whatsapp.com/bootstrap_main.9e733eb52f3ebbc989c0.css, using system principal instead."
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1644775922284	geckodriver	INFO	Listening on 127.0.0.1:43665
+1644775922291	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "54317" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860425
+1644775932694	Marionette	INFO	Stopped listening on port 35505
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1644776102329	geckodriver	INFO	Listening on 127.0.0.1:53287
+1644776102836	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "39019" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644776112816	geckodriver	INFO	Listening on 127.0.0.1:51871
+1644776113324	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "44197" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644776114077	Marionette	INFO	Marionette enabled
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+DevTools listening on ws://localhost:44197/devtools/browser/1ca40f43-b76c-405d-a600-34c78e6aa2af
+1644776116134	Marionette	INFO	Listening on port 38769
+1644776116320	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644776212427	geckodriver	INFO	Listening on 127.0.0.1:44923
+1644776212935	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "52393" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860428
+1644776220698	Marionette	INFO	Stopped listening on port 38769
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644776227163	geckodriver	INFO	Listening on 127.0.0.1:42931
+1644776227175	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "52527" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644776227947	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:52527/devtools/browser/0646d9da-e8e7-413d-8c1c-547767c9e6b4
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644776229966	Marionette	INFO	Listening on port 34973
+1644776230024	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644776403647	geckodriver	INFO	Listening on 127.0.0.1:47657
+1644776403655	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "59687" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860445
+1644776416398	Marionette	INFO	Stopped listening on port 34973
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1644776423384	geckodriver	INFO	Listening on 127.0.0.1:56011
+1644776423393	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "42041" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644776424145	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:42041/devtools/browser/d652b15a-83d3-4298-bc25-21ba05e5793e
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644776426660	Marionette	INFO	Listening on port 39207
+1644776426743	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1644776470723	geckodriver	INFO	Listening on 127.0.0.1:45673
+1644776470732	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "42005" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644776471596	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:42005/devtools/browser/950a9e1d-8d64-4787-84d9-7577d87a6f84
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644776473560	Marionette	INFO	Listening on port 45511
+1644776473674	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860430
+1644777137115	Marionette	INFO	Stopped listening on port 45511
+1644777226181	geckodriver	INFO	Listening on 127.0.0.1:50931
+1644777226190	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "47483" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777226993	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:47483/devtools/browser/82b37bf1-1d2d-47b5-896e-cd408db02e47
+1644777229154	Marionette	INFO	Listening on port 38241
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644777229245	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1644777251889	Marionette	INFO	Stopped listening on port 38241
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860442
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644777327516	geckodriver	INFO	Listening on 127.0.0.1:44465
+1644777327525	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "39199" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777328500	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:39199/devtools/browser/3d0f1b45-cb32-4682-8ee6-03e62863b45d
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644777330554	Marionette	INFO	Listening on port 46667
+1644777330689	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644777337432	Marionette	INFO	Stopped listening on port 46667
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860445
+1644777387640	geckodriver	INFO	Listening on 127.0.0.1:59507
+1644777387648	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "39835" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777388463	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:39835/devtools/browser/76d6222b-53f6-4bd9-8bc2-b6db44226577
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644777390376	Marionette	INFO	Listening on port 42713
+1644777390494	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644777397047	Marionette	INFO	Stopped listening on port 42713
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860555
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A0078,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644777463766	geckodriver	INFO	Listening on 127.0.0.1:59091
+1644777464274	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "36995" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777465032	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:36995/devtools/browser/3ed0c9b3-336c-4676-88bc-372e121f69f1
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644777467071	Marionette	INFO	Listening on port 41217
+1644777467113	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644777474059	Marionette	INFO	Stopped listening on port 41217
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860542
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644777671898	geckodriver	INFO	Listening on 127.0.0.1:44039
+1644777671909	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "42045" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644777689510	geckodriver	INFO	Listening on 127.0.0.1:59985
+1644777689538	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "44313" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777690655	Marionette	INFO	Marionette enabled
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+DevTools listening on ws://localhost:44313/devtools/browser/76992928-aa85-4726-bc1d-e70fbe7adbfc
+1644777694505	Marionette	INFO	Listening on port 36297
+1644777694644	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1644777702683	geckodriver	INFO	Listening on 127.0.0.1:33655
+1644777702693	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "51425" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777703654	Marionette	INFO	Marionette enabled
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+DevTools listening on ws://localhost:51425/devtools/browser/ab6dea48-e573-41b9-b4c0-380e0c59cf0b
+1644777706610	Marionette	INFO	Listening on port 40731
+1644777706738	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644777713538	Marionette	INFO	Stopped listening on port 40731
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860426
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644777790451	geckodriver	INFO	Listening on 127.0.0.1:41565
+1644777790461	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "59499" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777791239	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:59499/devtools/browser/dc850012-be01-4f01-b2a8-fd4470560d9a
+1644777793080	Marionette	INFO	Listening on port 39109
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644777793189	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644777800019	Marionette	INFO	Stopped listening on port 39109
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860424
+1644777835003	geckodriver	INFO	Listening on 127.0.0.1:49077
+1644777835012	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "41595" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777835866	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:41595/devtools/browser/aad47f23-cfec-45c1-afe3-d57490a47089
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644777837998	Marionette	INFO	Listening on port 42103
+1644777838035	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1644777874630	geckodriver	INFO	Listening on 127.0.0.1:37107
+1644777874639	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "57247" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860445
+1644777889689	Marionette	INFO	Stopped listening on port 42103
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644777891471	geckodriver	INFO	Listening on 127.0.0.1:45703
+1644777891480	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "42481" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777892258	Marionette	INFO	Marionette enabled
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+DevTools listening on ws://localhost:42481/devtools/browser/74f6cab5-434a-4c21-a33e-77eb6c1f8094
+1644777894251	Marionette	INFO	Listening on port 37555
+1644777894296	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1644777915605	geckodriver	INFO	Listening on 127.0.0.1:47061
+1644777915614	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "34871" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860542
+1644777925495	Marionette	INFO	Stopped listening on port 37555
+1644777930031	geckodriver	INFO	Listening on 127.0.0.1:42667
+1644777930537	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "35279" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644777931529	Marionette	INFO	Marionette enabled
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+DevTools listening on ws://localhost:35279/devtools/browser/be4f6811-81e9-4654-8ca5-717a9086571c
+1644777933446	Marionette	INFO	Listening on port 36391
+1644777933468	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+SourceActor threw an exception: [Exception... "Failed to open input source 'file:///'"  nsresult: "0x80520015 (NS_ERROR_FILE_ACCESS_DENIED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:448:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:412:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2097:35
+addAllSources@resource://devtools/server/actors/thread.js:1452:14
+watch@resource://devtools/server/actors/resources/sources.js:49:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:150:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:52:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:623:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:529:21
+Line: 670, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: NS_ERROR_FILE_ACCESS_DENIED: Failed to open input source 'file:///'
+Handler function threw an exception: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIHttpChannelInternal.remoteAddress]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/server/actors/network-monitor/network-observer.js :: _onResponseHeader :: line 1069"  data: no]
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:1069:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:642:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:751:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1069, column: 0
+console.error: ({})
+Handler function threw an exception: TypeError: undefined has no properties
+Stack: _getWaitTiming@resource://devtools/server/actors/network-monitor/network-observer.js:1168:1
+_setupHarTimings@resource://devtools/server/actors/network-monitor/network-observer.js:1393:28
+_onTransactionClose@resource://devtools/server/actors/network-monitor/network-observer.js:1116:27
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:645:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:751:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1168, column: 1
+console.error: (new TypeError("undefined has no properties", "resource://devtools/server/actors/network-monitor/network-observer.js", 1168))
+1644778212960	geckodriver	INFO	Listening on 127.0.0.1:34257
+1644778213467	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "54169" "-no-remote" "-profile" "/tmp/rust_mozprofileu6cDmP"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644778214681	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileu6cDmP/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54169/devtools/browser/890aa01a-e91b-48af-b735-85a67d4af11d
+1644778217686	Marionette	INFO	Listening on port 41903
+1644778217815	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 1001))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2315))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2315))
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal4294967298/pagestyle24 (resource://devtools/server/actors/page-style.js:1001:5)", "resource://devtools/shared/protocol/Front.js", 365))
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1644778274525	geckodriver	INFO	Listening on 127.0.0.1:37711
+1644778274534	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35611" "-no-remote" "-profile" "/tmp/rust_mozprofilebjrjaf"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644778276463	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilebjrjaf/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35611/devtools/browser/05d19fae-28b9-4563-a01a-a1c0ae7a8f99
+1644778279644	Marionette	INFO	Listening on port 45417
+1644778279800	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3
+1644778313363	Marionette	INFO	Stopped listening on port 41903
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: , line 0: NetworkError: FetchEvent.respondWith() Promise rejected
+JavaScript error: resource://gre/modules/ConduitsChild.jsm, line 112: Error: sendRemoveListener on closed conduit adblockultimate@adblockultimate.net.412316860428
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1644778317276	Marionette	INFO	Stopped listening on port 36391
+Exiting due to channel error.
+Exiting due to channel error.
+1644778372544	geckodriver	INFO	Listening on 127.0.0.1:56901
+1644778372554	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-profile" "/home/dv/.mozilla/firefox/99q1ht97.default-release/" "--remote-debugging-port" "48543" "-no-remote"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644778373442	Marionette	INFO	Marionette enabled
+DevTools listening on ws://localhost:48543/devtools/browser/662458aa-9ee0-411b-b8c1-897b540ea5bc
+1644778375406	Marionette	INFO	Listening on port 39945
+JavaScript warning: moz-extension://22424fd0-7405-4701-a4cb-9c0a2433fdf4/lib/filter/antibanner.js, line 1163: unreachable code after return statement
+1644778375492	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-middle_7fa161964e93db72b8d00ae22189d75f.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/sequential-ptt-end_62ed28be622237546fd39f9468a76a49.mp3
+JavaScript error: https://web.whatsapp.com/serviceworker.js, line 1: TypeError: Cache.put: Cache got basic response with bad status 206 while trying to add request https://web.whatsapp.com/notification_2a485d84012c106acef03b527bb54635.mp3

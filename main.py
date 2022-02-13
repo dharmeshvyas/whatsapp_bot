@@ -1,22 +1,29 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
+import selenium
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
 from time import sleep
 import re
 from unicodedata import normalize
 import messageData
 import features as feat
+import pyperclip
 
 
 class WhatsappBot:
     driver = None
-    username=None
+    username = None
+
     def __init__(self, driverpath, userdata=None):
-        # opt = Options()
-        # opt.add_argument('--user-data-dir=D:/User_Data')
-        service = Service('./driver/chromedriver')
-        self.driver = webdriver.Chrome(service=service)
+        opt = Options()
+        # for firefox
+        opt.add_argument("-profile")
+        opt.add_argument("/home/dv/.mozilla/firefox/99q1ht97.default-release/")
+        # for chrome
+        # opt.add_argument = {'--user-data-dir':'/home/dv/.mozilla/firefox/xz37pcsw.default/'}
+        service = Service(driverpath)
+        self.driver = webdriver.Firefox(service=service, options=opt)
         pass
 
     def Connection(self, driverpath):
@@ -44,7 +51,7 @@ class WhatsappBot:
                 continue
 
             element_name = chat.find_elements(By.CLASS_NAME, 'zoWT4')
-            name = element_name[0].text.replace(" ","")
+            name = element_name[0].text.replace(" ", "")
             WhatsappBot.username = name
             print(name, "authorized to be served by bot")
 
@@ -52,9 +59,9 @@ class WhatsappBot:
             return True
         return False
 
-    def identifying_message(self,element=1):
+    def identifying_message(self, element=1):
         element_box_message = self.driver.find_elements(By.CLASS_NAME, "Nm1g1")
-        position = len(element_box_message) - element
+        position = len(element_box_message) - 1
 
         color = element_box_message[position].value_of_css_property("background-color")
 
@@ -100,12 +107,12 @@ class WhatsappBot:
                     response = "you have not right to change into bot :(\n"
                     return response
 
-            elif self.identifying_message(2)== "what would you add into user message ?":
+            elif self.identifying_message(2) == "what would you add into user message ?":
                 messageData.EditMessage(5, "Replay", message)
                 response = "message updated\n"
                 return response
 
-            elif self.identifying_message(2)== "what's your message?":
+            elif self.identifying_message(2) == "what's your message?":
                 messageData.EditMessage(5, "Replay", message)
                 response = "message updated\n"
                 return response
@@ -124,7 +131,6 @@ class WhatsappBot:
             response = self.prepared_response(message)
             chatbox.send_keys(response)
         self.close_chat()
-    def InsertMessage(self):
 
     def send_image(self):
         filepath = r"D:\BCA\BCA VI\Project\Whatsapp Bot\assets\test.jpg"
@@ -154,19 +160,36 @@ class WhatsappBot:
 
     def Run(self):
         self.driver.get("https://web.whatsapp.com/")
-        sleep(15)
+        sleep(3)
+        if len(self.driver.find_elements(By.CLASS_NAME, "_2UwZ_")) >= 1:
+            sleep(3)
+            qrcodeelement = self.driver.find_element(By.XPATH,
+                                                     '/html/body/div[1]/div[1]/div/div[2]/div[1]/div/div[2]/div')
+            code = qrcodeelement.get_attribute("data-ref")
+            pyperclip.copy(code)
+            print(code)
+            sleep(15)
+
         while True:
-            if not self.search_chat():
-                sleep(3)
-                continue
 
-            message = self.identifying_message()
+            try:
 
-            if message is None:
-                continue
+                if not self.search_chat():
+                    sleep(3)
+                    continue
 
-            self.message_process(message)
+                message = self.identifying_message()
+
+                if message is None:
+                    continue
+
+                self.message_process(message)
+            finally:
+                print("error")
 
 
-wb = WhatsappBot('./driver/chromedriver')
+#                self.driver.quit()
+
+
+wb = WhatsappBot('./driver/geckodriver')
 wb.Run()
