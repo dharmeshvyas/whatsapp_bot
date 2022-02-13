@@ -186,9 +186,7 @@ class WhatsappBot:
                 self.message_process(message)
             finally:
                 print("error")
-
-
-#                self.driver.quit()
+                self.driver.quit()
 
 
 wb = WhatsappBot('./driver/geckodriver')
