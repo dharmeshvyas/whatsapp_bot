@@ -1,7 +1,7 @@
 from selenium import webdriver
-import selenium
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from time import sleep
 import re
@@ -9,22 +9,23 @@ from unicodedata import normalize
 import messageData
 import features as feat
 import pyperclip
+from os.path import abspath
 
 
 class WhatsappBot:
     driver = None
     username = None
 
-    def __init__(self, driverpath, userdata=None):
-        opt = Options()
-        # for firefox
-        #nyfjrizg
-        opt.add_argument("-profile")
-        opt.add_argument("/home/dv/.mozilla/firefox/99q1ht97.default-release/")
+    def __init__(self):
+        opt = webdriver.ChromeOptions()
         # for chrome
-        # opt.add_argument = {'--user-data-dir':'/home/dv/.mozilla/firefox/xz37pcsw.default/'}
-        service = Service(driverpath)
-        self.driver = webdriver.Firefox(service=service, options=opt)
+        path = abspath("Default")
+
+        opt.add_argument("--user-data-dir="+path)
+        opt.headless = True
+        #chromedriver = ChromeDriverManager().install()
+        #service = Service(chromedriver)
+        self.driver = webdriver.Chrome(executable_path="./driver/chromedriver", options=opt)
         pass
 
     def Connection(self, driverpath):
@@ -62,7 +63,7 @@ class WhatsappBot:
 
     def identifying_message(self, element=1):
         element_box_message = self.driver.find_elements(By.CLASS_NAME, "Nm1g1")
-        position = len(element_box_message) - 1
+        position = len(element_box_message) - element
 
         color = element_box_message[position].value_of_css_property("background-color")
 
@@ -117,6 +118,9 @@ class WhatsappBot:
                 messageData.EditMessage(5, "Replay", message)
                 response = "message updated\n"
                 return response
+            elif self.identifying_message() == "shutdown":
+                self.driver.quit()
+                return ""
             else:
                 response = "invalid command \n"
         return response
@@ -161,34 +165,33 @@ class WhatsappBot:
 
     def Run(self):
         self.driver.get("https://web.whatsapp.com/")
-        sleep(3)
-        if len(self.driver.find_elements(By.CLASS_NAME, "_2UwZ_")) >= 1:
-            sleep(3)
-            qrcodeelement = self.driver.find_element(By.XPATH,
-                                                     '/html/body/div[1]/div[1]/div/div[2]/div[1]/div/div[2]/div')
-            code = qrcodeelement.get_attribute("data-ref")
-            pyperclip.copy(code)
-            print(code)
-            sleep(15)
+        sleep(2)
+        try:
+            if len(self.driver.find_elements(By.CLASS_NAME, "_2UwZ_")) == 1:
+                sleep(1)
+                qrcodeelement = self.driver.find_element(By.XPATH,
+                                                         '/html/body/div[1]/div[1]/div/div[2]/div[1]/div/div[2]/div')
+                code = qrcodeelement.get_attribute("data-ref")
+                pyperclip.copy(code)
+                print(code)
+                sleep(15)
+        except:
+            print("qr code scanned earlier")
 
         while True:
 
+            if not self.search_chat():
+                sleep(3)
+                continue
             try:
-
-                if not self.search_chat():
-                    sleep(3)
-                    continue
-
                 message = self.identifying_message()
-
                 if message is None:
                     continue
-
                 self.message_process(message)
-            finally:
-                print("error")
-                self.driver.quit()
+            except:
+                print("element not found")
 
 
-wb = WhatsappBot('./driver/geckodriver')
+
+wb = WhatsappBot()
 wb.Run()

@@ -1,0 +1,10 @@
+[13676:13676:0214/223145.807048:ERROR:sandbox_linux.cc(377)] InitializeSandbox() called with multiple threads in process gpu-process.
+[13634:13634:0214/223145.913081:WARNING:bluez_dbus_manager.cc(248)] Floss manager not present, cannot set Floss enable/disable.
+[13676:13703:0214/223147.003735:ERROR:node_controller.cc(585)] Trying to re-add dropped peer 15A027E82852AB92.668D8401210A41D5
+[13634:13634:0214/223149.695116:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
+[13634:13634:0214/223149.812009:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
+[13634:13634:0214/223149.856586:INFO:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (1)
+[13634:13660:0214/223152.923836:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+[13634:13660:0214/223152.924180:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+[13676:13703:0214/223200.733799:ERROR:node_controller.cc(585)] Trying to re-add dropped peer 270E3984C0869B81.A0A85501058441D3
+[13634:13634:0214/223200.795854:WARNING:pref_notifier_impl.cc(40)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

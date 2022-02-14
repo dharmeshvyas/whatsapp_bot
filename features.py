@@ -7,7 +7,7 @@ def addAnnouncement(message):
 
 
 def isAdmin(contact):
-    if contact == "+916353785601":
+    if contact == "+916353785601" or contact == "Me":
         return True
     else:
         return False
