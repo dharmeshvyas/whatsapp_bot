@@ -9,7 +9,6 @@ from unicodedata import normalize
 import messageData
 import features as feat
 import pyperclip
-from os.path import abspath
 
 
 class WhatsappBot:
@@ -18,8 +17,7 @@ class WhatsappBot:
     def __init__(self):
         opt = webdriver.ChromeOptions()
         # for chrome
-        path = abspath("Default")
-        opt.add_argument("--user-data-dir="+path)
+        #opt.add_argument("--user-data-dir="+path)
         opt.headless = False
         #chromedriver = ChromeDriverManager().install()
         #service = Service(chromedriver)
