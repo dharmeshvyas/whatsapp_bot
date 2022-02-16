@@ -15,22 +15,15 @@ from os.path import abspath
 class WhatsappBot:
     driver = None
     username = None
-
     def __init__(self):
         opt = webdriver.ChromeOptions()
         # for chrome
         path = abspath("Default")
-
         opt.add_argument("--user-data-dir="+path)
-        opt.headless = True
+        opt.headless = False
         #chromedriver = ChromeDriverManager().install()
         #service = Service(chromedriver)
         self.driver = webdriver.Chrome(executable_path="./driver/chromedriver", options=opt)
-        pass
-
-    def Connection(self, driverpath):
-        self.__init__(driverpath)
-        return WhatsappBot
 
     def search_chat(self):
         print("Searching chats")
@@ -56,12 +49,17 @@ class WhatsappBot:
             name = element_name[0].text.replace(" ", "")
             WhatsappBot.username = name
             print(name, "authorized to be served by bot")
-
+            if feat.isUser(name):
+                print()
+            else:
+                feat.addUser(name)
             chat.click()
             return True
         return False
 
     def identifying_message(self, element=1):
+
+
         element_box_message = self.driver.find_elements(By.CLASS_NAME, "Nm1g1")
         position = len(element_box_message) - element
 
@@ -72,7 +70,7 @@ class WhatsappBot:
             return
 
         element_message = element_box_message[position].find_elements(By.CLASS_NAME, "_1Gy50 ")
-        message = element_message[0].text
+        message = element_message[0].text.lower()
 
         print("message recieved..", message)
         return self.normalizer(message)
@@ -86,44 +84,87 @@ class WhatsappBot:
         return normalize("NFD", message)
 
     def prepared_response(self, message: str):
+
+
         print("prepared responses")
         data = messageData.MessageLoad()
-        for index in data:
-            if message.__contains__(index['message']):
-                response = index['Replay']
-                return response
-        else:
-            if message.__contains__('add announcement'):
-
-                if feat.isAdmin(WhatsappBot.username):
-                    response = "what's your message?\n"
+        if not feat.isAdmin(WhatsappBot.username):
+            for index in data:
+                if message.__contains__(index['message']):
+                    response = index['Replay']
                     return response
-                else:
-                    response = "you have not right to change into bot :(\n"
-                    return response
-            elif message.__contains__('add message'):
-                if feat.isAdmin(WhatsappBot.username):
-                    response = "what would you add into user message ?\n"
-                    return response
-                else:
-                    response = "you have not right to change into bot :(\n"
-                    return response
-
-            elif self.identifying_message(2) == "what would you add into user message ?":
-                messageData.EditMessage(5, "Replay", message)
-                response = "message updated\n"
-                return response
-
-            elif self.identifying_message(2) == "what's your message?":
-                messageData.EditMessage(5, "Replay", message)
-                response = "message updated\n"
-                return response
-            elif self.identifying_message() == "shutdown":
-                self.driver.quit()
-                return ""
             else:
-                response = "invalid command \n"
-        return response
+                response = "invalid message do you want see command list(yes/no)"
+
+                if self.identifying_message(2) != response:
+                    return response + "\n"
+                else:
+                    if self.identifying_message(2) != "as your wish." and self.identifying_message() == "yes":
+                        return messageData.commandlist
+                    else:
+                        return "as your wish.\n"
+        else:
+            for index in data:
+                if message.__contains__(index['message']):
+                    response = index['Replay']
+                    return response
+            else:
+                admindata = messageData.MessageLoad("admin")
+                for index in admindata:
+                    if message.__contains__(index['message']):
+                        response = index['response']
+                        return response
+                else:
+                    response = "invalid message do you want see command list(yes/no)"
+                    if self.identifying_message(2) != response:
+                        return response+"\n"
+                    else:
+                        if self.identifying_message(2) !="as your wish." and self.identifying_message()=="yes":
+                            return messageData.listofcommand
+                        else:
+
+                            return "as your wish.\n"
+
+            # adminmessages = messageData.MessageLoad("admin")
+            # for index in adminmessages:
+            #     if message.__contains__(index['message']):
+            #         response = index['response']
+            #         return response
+            # else:
+            #     return "as your wish.\n"
+
+        # else:
+        #     if message.__contains__('add announcement'):
+        #
+        #         if feat.isAdmin(WhatsappBot.username):
+        #             response = "what's your message?\n"
+        #             return response
+        #         else:
+        #             response = "you have not right to change into bot :(\n"
+        #             return response
+        #     elif message.__contains__('add message'):
+        #         if feat.isAdmin(WhatsappBot.username):
+        #             response = "what would you add into user message ?\n"
+        #             return response
+        #         else:
+        #             response = "you have not right to change into bot :(\n"
+        #             return response
+        #
+        #     elif self.identifying_message(2) == "what would you add into user message ?":
+        #         messageData.EditMessage(5, "Replay", message)
+        #         response = "message updated\n"
+        #         return response
+        #
+        #     elif self.identifying_message(2) == "what's your message?":
+        #         messageData.EditMessage(5, "Replay", message)
+        #         response = "message updated\n"
+        #         return response
+        #     elif self.identifying_message() == "shutdown":
+        #         self.driver.quit()
+        #         return ""
+        #     else:
+        #         response = "invalid command \n"
+        # return response
 
     def message_process(self, message: str):
         chatbox = self.driver.find_element(By.XPATH,
