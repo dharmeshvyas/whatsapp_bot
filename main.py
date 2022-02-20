@@ -1,33 +1,37 @@
+import os
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from time import sleep
-import re
+import re, pyperclip
 from unicodedata import normalize
 import messageData
 import features as feat
-import pyperclip
 
 
 class WhatsappBot:
-    driver = None
-    username = None
+    username =None
     def __init__(self):
-        opt = webdriver.ChromeOptions()
-        # for chrome
-        #opt.add_argument("--user-data-dir="+path)
+        opt = Options()
         opt.headless = False
-        #chromedriver = ChromeDriverManager().install()
-        #service = Service(chromedriver)
-        self.driver = webdriver.Chrome(executable_path="./driver/chromedriver", options=opt)
+        opt.add_argument("--no-sandbox")
+        opt.add_argument("--user-data-dir=/home/dv/chromedata/user-1")
+        opt.add_argument("--disable-dev-shm-usage")
+        service = Service("./driver/chromedriver")
+        # service = Service("./driver/chromedriver")
+        self.driver = webdriver.Chrome(service=service, options=opt)
+        self.Waiter = WebDriverWait(self.driver, 10)
 
     def search_chat(self):
-        print("Searching chats")
+        # feat.PrintDetails("searching chats", 'INFO')
 
-        if len(self.driver.find_elements(By.CLASS_NAME, "zaKsw")) == 0:
-            print("chat opened")
+        if len(self.Waiter.until(EC.visibility_of_all_elements_located((By.CLASS_NAME, "zaKsw")),
+                                 "chats not found")) == 0:
+            # feat.PrintDetails("chat opened", 'INFO')
 
             message = self.identifying_message()
             if message is not None:
@@ -35,28 +39,26 @@ class WhatsappBot:
 
         chats = self.driver.find_elements(By.CLASS_NAME, "_3m_Xw")
         for chat in chats:
-            print("detecting unread messages...")
+            # feat.PrintDetails("detecting unread messages", 'INFO')
 
             unread_chats = chat.find_elements(By.CLASS_NAME, "cfzgl7ar")
 
             if len(unread_chats) == 0:
-                print("chat answered")
+                # feat.PrintDetails("chat answered", 'INFO')
                 continue
 
             element_name = chat.find_elements(By.CLASS_NAME, 'zoWT4')
-            name = element_name[0].text.replace(" ", "")
-            WhatsappBot.username = name
-            print(name, "authorized to be served by bot")
-            if feat.isUser(name):
-                print()
+            WhatsappBot.username = element_name[0].text.replace(" ", "")
+            feat.PrintDetails(WhatsappBot.username, 'USER')
+            if feat.isUser(WhatsappBot.username):
+                pass
             else:
-                feat.addUser(name)
+                feat.addUser(WhatsappBot.username)
             chat.click()
             return True
         return False
 
     def identifying_message(self, element=1):
-
 
         element_box_message = self.driver.find_elements(By.CLASS_NAME, "Nm1g1")
         position = len(element_box_message) - element
@@ -64,14 +66,14 @@ class WhatsappBot:
         color = element_box_message[position].value_of_css_property("background-color")
 
         if color == "rgba(220, 248, 198, 1)" or color == "rgba(5, 97, 98, 1)":
-            print("chat identified")
+            # feat.PrintDetails("chat identified", "INFO")
             return
 
         element_message = element_box_message[position].find_elements(By.CLASS_NAME, "_1Gy50 ")
         message = element_message[0].text.lower()
-
-        print("message recieved..", message)
-        return self.normalizer(message)
+        if element==1:
+            feat.PrintDetails(message, "MESSAGE")
+        return message
 
     def normalizer(self, message: str):
         message = re.sub(
@@ -83,98 +85,79 @@ class WhatsappBot:
 
     def prepared_response(self, message: str):
 
-
-        print("prepared responses")
+        # feat.PrintDetails("find response", "INFO")
         data = messageData.MessageLoad()
+
+        # for user
         if not feat.isAdmin(WhatsappBot.username):
             for index in data:
                 if message.__contains__(index['message']):
                     response = index['Replay']
-                    return response
+                    return response + "\n"
+                elif message.__contains__("list"):
+                    response = messageData.getCommandlist()
+                    return response+"\n"
             else:
                 response = "invalid message do you want see command list(yes/no)"
-
-                if self.identifying_message(2) != response:
+                if message.__contains__('yes'):
+                    response = messageData.getCommandlist()
                     return response + "\n"
+                elif message.__contains__('no'):
+                    return "AS you Wish\n"
                 else:
-                    if self.identifying_message(2) != "as your wish." and self.identifying_message() == "yes":
-                        return messageData.commandlist
-                    else:
-                        return "as your wish.\n"
+                    pass
+                return response + "\n"
+
+        # FOR ADMIN
         else:
             for index in data:
                 if message.__contains__(index['message']):
                     response = index['Replay']
-                    return response
+                    return response + "\n"
+                elif message.__contains__("list"):
+                    response = messageData.getCommandlist("admin")
+                    return response+"\n"
             else:
                 admindata = messageData.MessageLoad("admin")
                 for index in admindata:
                     if message.__contains__(index['message']):
                         response = index['response']
-                        return response
-                else:
-                    response = "invalid message do you want see command list(yes/no)"
-                    if self.identifying_message(2) != response:
+                        if message.__contains__('alluser'):
+                            response = messageData.ALluser()
+                        return response + "\n"
+                    elif self.identifying_message(3) == "add message":
+                        messageData.AddMessages(message)
+                        return "message added\n"
+                    elif self.identifying_message(3)=="add announcement":
+                        messageData.EditMessage(5,'Replay',message)
+                        response = "Announcement update successfully"
                         return response+"\n"
                     else:
-                        if self.identifying_message(2) !="as your wish." and self.identifying_message()=="yes":
-                            return messageData.listofcommand
-                        else:
-
-                            return "as your wish.\n"
-
-            # adminmessages = messageData.MessageLoad("admin")
-            # for index in adminmessages:
-            #     if message.__contains__(index['message']):
-            #         response = index['response']
-            #         return response
-            # else:
-            #     return "as your wish.\n"
-
-        # else:
-        #     if message.__contains__('add announcement'):
-        #
-        #         if feat.isAdmin(WhatsappBot.username):
-        #             response = "what's your message?\n"
-        #             return response
-        #         else:
-        #             response = "you have not right to change into bot :(\n"
-        #             return response
-        #     elif message.__contains__('add message'):
-        #         if feat.isAdmin(WhatsappBot.username):
-        #             response = "what would you add into user message ?\n"
-        #             return response
-        #         else:
-        #             response = "you have not right to change into bot :(\n"
-        #             return response
-        #
-        #     elif self.identifying_message(2) == "what would you add into user message ?":
-        #         messageData.EditMessage(5, "Replay", message)
-        #         response = "message updated\n"
-        #         return response
-        #
-        #     elif self.identifying_message(2) == "what's your message?":
-        #         messageData.EditMessage(5, "Replay", message)
-        #         response = "message updated\n"
-        #         return response
-        #     elif self.identifying_message() == "shutdown":
-        #         self.driver.quit()
-        #         return ""
-        #     else:
-        #         response = "invalid command \n"
-        # return response
+                        pass
+                else:
+                    response = "invalid message do you want see command list(yes/no)"
+                    if message.__contains__('yes'):
+                        response = messageData.getCommandlist("admin")
+                        return response + "\n"
+                    elif message.__contains__('no'):
+                        return "AS you Wish\n"
+                    else:
+                        pass
+                    return response + "\n"
 
     def message_process(self, message: str):
         chatbox = self.driver.find_element(By.XPATH,
                                            '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
-        if message == "image":
+        if message == "":
             response = self.prepared_response(message)
-            chatbox.send_keys(response)
+            chatbox.send_keys(str(response))
             self.send_image()
         else:
             response = self.prepared_response(message)
             chatbox.send_keys(response)
         self.close_chat()
+        feat.PrintDetails("BOT", 'USER')
+        feat.PrintDetails(response, "MESSAGE")
 
     def send_image(self):
         filepath = r"D:\BCA\BCA VI\Project\Whatsapp Bot\assets\test.jpg"
@@ -193,18 +176,20 @@ class WhatsappBot:
         sleep(2)
 
     def close_chat(self):
-        openmenu = self.driver.find_element(By.XPATH, '//*[@id="main"]/header/div[3]/div/div[2]/div/div')
-
-        openmenu.click()
-        sleep(1)
-        close_chat = self.driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/span[4]/div/ul/div/div/li[3]/div[1]')
-        sleep(1)
-        close_chat.click()
-        print("chat closed")
+        self.Waiter.until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@id="main"]/header/div[3]/div/div[2]/div/div')),
+            "not found close menu in chat ").click()
+        self.Waiter.until(
+            EC.visibility_of_element_located(
+                (By.XPATH, '/html/body/div[1]/div[1]/span[4]/div/ul/div/div/li[3]/div[1]')),
+            "not found close chat element in Menu").click()
+        # feat.PrintDetails("CHAT CLOSED", "INFO")
 
     def Run(self):
+        feat.printBio()
         self.driver.get("https://web.whatsapp.com/")
-        sleep(2)
+        # WAIT FOR LOADING SIDE TILL 10 SECS.
+        self.Waiter.until(EC.title_is("WhatsApp"))
         try:
             if len(self.driver.find_elements(By.CLASS_NAME, "_2UwZ_")) == 1:
                 sleep(1)
@@ -212,15 +197,13 @@ class WhatsappBot:
                                                          '/html/body/div[1]/div[1]/div/div[2]/div[1]/div/div[2]/div')
                 code = qrcodeelement.get_attribute("data-ref")
                 pyperclip.copy(code)
-                print(code)
-                sleep(15)
+                feat.PrintDetails("QR CODE TEXT COPIED GENERATE AND SCAN THE QR CODE ", "INFO")
         except:
-            print("qr code scanned earlier")
+            feat.PrintDetails("QR CODE SCANNED", "INFO")
 
         while True:
-
             if not self.search_chat():
-                sleep(3)
+                sleep(1)
                 continue
             try:
                 message = self.identifying_message()
@@ -228,8 +211,7 @@ class WhatsappBot:
                     continue
                 self.message_process(message)
             except:
-                print("element not found")
-
+                feat.PrintDetails("MESSAGE NOT FOUND", "ERROR")
 
 
 wb = WhatsappBot()
