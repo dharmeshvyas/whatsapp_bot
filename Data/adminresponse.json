@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "message": "alluser",
+    "response": "sending..\n"
+  },{
+    "id": 2,
+    "message": "add message",
+    "response": "whats your message and response? i,e :[messsage-response]\n"
+  },{
+    "id": 3,
+    "message": "edit message",
+    "response": "whats your message and response that you want to change? i.e[message-response]\n"
+  },{
+    "id": 4,
+    "message": "add announcement",
+    "response": "whats your message for announcement?\n"
+  }
+]
